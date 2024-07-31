@@ -44,9 +44,9 @@ def get_args():
     # Dataset
     parser.add_argument('--dataset', type=str, default='mosei', choices=['mosi','mosei'],
                         help='dataset to use (default: mosi)')
-    parser.add_argument('--data_path', type=str, default='/data/kezhou/MMA/dataset/MOSI/aligned_50.pkl', 
+    parser.add_argument('--data_path', type=str, default='aligned_50.pkl', 
                         help='path for storing the dataset')
-    parser.add_argument('--bert_path', type=str, default='/data/kezhou/MMA/PLMs/bert-base',
+    parser.add_argument('--bert_path', type=str, default='bert-base-uncased',
                         help='path for storing the dataset')
     # Dropouts
     parser.add_argument('--dropout_prj', type=float, default=0.1,
