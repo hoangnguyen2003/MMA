@@ -1,6 +1,6 @@
 # Mixture of Multimodal Adapters for Sentiment Analysis
 
-This repository contains code of Mixture of Multimodal Adapters for Sentiment Analysis. 
+This repository contains code of Mixture of Multimodal Adapters for Sentiment Analysis, accepted at 2025 Annual Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics (NAACL 2025).
 
 ## Introduction
 
