@@ -5,7 +5,7 @@ This repository contains code of Mixture of Multimodal Adapters for Sentiment An
 ## Introduction
 
 MMA is a plug-and-play module, which can be flexibly applied to various pre-trained language models and transform these models into a multi-modal model that can handle MSA tasks.
-
+![MMA](MMA_v1.1.png)
 
 ## Usage
 
