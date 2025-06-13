@@ -24,8 +24,15 @@ Training on other dataset and LLM:
 
 coming soon.
 ## Citation
-
-
+```
+@inproceedings{chen2025mixture,
+  title={Mixture of Multimodal Adapters for Sentiment Analysis},
+  author={Chen, Kezhou and Wang, Shuo and Ben, Huixia and Tang, Shengeng and Hao, Yanbin},
+  booktitle={Proceedings of the 2025 Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers)},
+  pages={1822--1833},
+  year={2025}
+}
+```
 
 ## Contact 
 If you have any question, feel free to contact me through chenkezhou@mail.ustc.edu.cn.
