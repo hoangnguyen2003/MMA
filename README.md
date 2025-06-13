@@ -11,11 +11,11 @@ MMA is a plug-and-play module, which can be flexibly applied to various pre-trai
 
 1. Download the word-aligned CMU-MOSI dataset from [MMSA](https://github.com/thuiar/MMSA). Download the pre-trained BERT model from [Huggingface](https://huggingface.co/google-bert/bert-base-uncased/tree/main).
 2. Set up the environment.
-'''
+```
 conda create -n MMA python=3.7
 conda activate MMA
 pip install -r requirements.txt
-'''
+```
 3. Start training.
 
 Training on CMU-MOSI:
