@@ -12,7 +12,6 @@ bitsandbytes==0.41.2.post2
 black==23.3.0
 boto3==1.21.37
 botocore==1.24.37
-Bottleneck @ file:///tmp/build/80754af9/bottleneck_1648028896657/work
 Brotli==1.1.0
 cachetools==5.2.0
 certifi==2021.10.8
