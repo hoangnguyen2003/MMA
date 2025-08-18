@@ -63,7 +63,7 @@ Markdown==3.4.1
 MarkupSafe==2.1.1
 matplotlib==3.5.3
 matplotlib-inline==0.1.6
-mkl-fft==1.3.1
+mkl-fft
 mkl-random
 mkl-service==2.4.0
 mpmath==1.3.0
@@ -72,7 +72,7 @@ multidict==6.0.4
 multiprocess==0.70.14
 multivolumefile==0.2.3
 mypy-extensions==1.0.0
-numba==0.56.4
+numba
 numexpr
 numpy
 nvidia-cublas-cu11==11.10.3.66
