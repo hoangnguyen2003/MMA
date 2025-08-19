@@ -396,20 +396,14 @@ class XBertLayer(nn.Module):
         if add_adapter==True:
 
             # ---------------------cross attention----------------------#
-            self.adapter_conv_audio = nn.Conv1d(in_channels=5, out_channels=config.hidden_size, kernel_size=config.kernel_size)
-            self.adapter_conv_vision = nn.Conv1d(in_channels=20, out_channels=config.hidden_size, kernel_size=config.kernel_size)
+            self.adapter_conv_audio = nn.Conv1d(in_channels=config.audio_dim, out_channels=config.hidden_size, kernel_size=config.kernel_size)
+            self.adapter_conv_vision = nn.Conv1d(in_channels=config.vision_dim, out_channels=config.hidden_size, kernel_size=config.kernel_size)
             self.text_audio_atten = NoParamMultiHeadAttention(embed_size=config.hidden_size)
             self.text_vision_atten = NoParamMultiHeadAttention(embed_size=config.hidden_size)
         
             # ---------------------cross attention----------------------#
             self.audio_dim = config.audio_dim
             self.vision_dim = config.vision_dim
-            print('eeeeee-------------audio')
-            print(self.audio_dim)
-            print('eeeee-----------------vision')
-            print(self.vision_dim)
-            print('eeeee-----------------eeeee')
-
             self.rank = config.rank
         # self.alpha = config.alpha
             self.TopK = config.TopK
