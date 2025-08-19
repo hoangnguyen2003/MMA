@@ -102,15 +102,24 @@ def MMDataLoader(args):
     }
 
     print('\n\n\n')
+    print("\n\n=== Dataset Info ===")
     for split in ['train', 'valid', 'test']:
-        print(f"=== {split} ===")
-        for key, value in datasets[split].items():
-            if isinstance(value, list) and len(value) > 0:
-                print(key, type(value[0]), getattr(value[0], 'shape', None))
-            else:
-                print(key, "EMPTY")
+        dataset = datasets[split]
+        print(f"\n--- {split} ---")
+        print(f"Number of samples: {len(dataset)}")
 
-    print('\n\n\n')
+        # Lấy thử một sample để xem shape
+        sample = dataset[0]
+        for key, value in sample.items():
+            if isinstance(value, torch.Tensor):
+                print(key, value.shape)
+            elif isinstance(value, dict):  # labels
+                for k, v in value.items():
+                    print(f"labels[{k}]", v.shape)
+            else:
+                print(key, type(value))
+
+    print("\n\n")
     exit()
 
     if 'seq_lens' in args:
