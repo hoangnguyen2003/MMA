@@ -101,6 +101,12 @@ def MMDataLoader(args):
         'test': MMDataset(args, mode='test')
     }
 
+    print('\n\n\n')
+    print(datasets['train']['audio'][0])
+    print(datasets['train']['audio'][0].shape)
+    print('\n\n\n')
+    exit()
+
     if 'seq_lens' in args:
         args.seq_lens = datasets['train'].get_seq_len() 
 

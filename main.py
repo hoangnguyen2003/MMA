@@ -35,11 +35,6 @@ if __name__ == '__main__':
     train_config = get_config(dataset, mode='train', batch_size=args.batch_size)
     dataLoader = MMDataLoader(args)
 
-    print('\n\n\n')
-    print(dataLoader['train']['audio'][0])
-    print(dataLoader['train']['audio'][0].shape)
-    print('\n\n\n')
-
     train_loader = dataLoader['train']
     valid_loader = dataLoader['valid']
     test_loader = dataLoader['test']
