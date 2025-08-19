@@ -1,7 +1,10 @@
 import os
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"  # GPU
 os.environ['BNB_CUDA_VERSION'] = '117'
-os.environ['LD_LIBRARY_PATH'] = '/usr/local/cuda/lib64:' + os.environ.get('LD_LIBRARY_PATH', '')
+os.environ['LD_LIBRARY_PATH'] = '/usr/local/cuda/lib64:/usr/local/nvidia/lib64:/opt/conda/lib:' + os.environ.get('LD_LIBRARY_PATH', '')
+
+# Also add these commonly needed paths
+os.environ['LD_LIBRARY_PATH'] += ':/usr/lib/x86_64-linux-gnu'
 import torch
 import argparse
 import numpy as np
