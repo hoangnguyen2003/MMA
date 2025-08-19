@@ -1,6 +1,7 @@
 import os
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"  # GPU
-
+os.environ['BNB_CUDA_VERSION'] = '117'
+os.environ['LD_LIBRARY_PATH'] = '/usr/local/cuda/lib64:' + os.environ.get('LD_LIBRARY_PATH', '')
 import torch
 import argparse
 import numpy as np
