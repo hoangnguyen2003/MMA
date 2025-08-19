@@ -397,7 +397,7 @@ class XBertLayer(nn.Module):
 
             # ---------------------cross attention----------------------#
             self.adapter_conv_audio = nn.Conv1d(in_channels=74, out_channels=config.hidden_size, kernel_size=config.kernel_size)
-            self.adapter_conv_vision = nn.Conv1d(in_channels=20, out_channels=config.hidden_size, kernel_size=config.kernel_size)
+            self.adapter_conv_vision = nn.Conv1d(in_channels=35, out_channels=config.hidden_size, kernel_size=config.kernel_size)
             self.text_audio_atten = NoParamMultiHeadAttention(embed_size=config.hidden_size)
             self.text_vision_atten = NoParamMultiHeadAttention(embed_size=config.hidden_size)
         
