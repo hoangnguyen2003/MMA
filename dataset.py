@@ -102,8 +102,14 @@ def MMDataLoader(args):
     }
 
     print('\n\n\n')
-    print(datasets['train', 'audio', 0])
-    print(datasets['train', 'audio', 0].shape)
+    for split in ['train', 'valid', 'test']:
+        print(f"=== {split} ===")
+        for key, value in datasets[split].items():
+            if isinstance(value, list) and len(value) > 0:
+                print(key, type(value[0]), getattr(value[0], 'shape', None))
+            else:
+                print(key, "EMPTY")
+
     print('\n\n\n')
     exit()
 
