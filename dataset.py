@@ -102,8 +102,8 @@ def MMDataLoader(args):
     }
 
     print('\n\n\n')
-    print(datasets['train']['audio'][0])
-    print(datasets['train']['audio'][0].shape)
+    print(datasets['train', 'audio', 0])
+    print(datasets['train', 'audio', 0].shape)
     print('\n\n\n')
     exit()
 
