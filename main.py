@@ -1,24 +1,6 @@
 import os
-import sys
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"  # GPU
 
-# Clear any problematic paths from PATH
-path_dirs = os.environ.get('PATH', '').split(':')
-clean_path = [d for d in path_dirs if not any(x in d for x in ['https', '//www.kaggle.com', 'gcr.io', 'kagglegym'])]
-os.environ['PATH'] = ':'.join(clean_path)
-
-# Set CUDA environment variables
-os.environ['BNB_CUDA_VERSION'] = '117'
-os.environ['LD_LIBRARY_PATH'] = '/usr/local/cuda/lib64:/usr/local/nvidia/lib64:/opt/conda/lib:/usr/lib/x86_64-linux-gnu'
-
-# Add to existing LD_LIBRARY_PATH if it exists
-if 'LD_LIBRARY_PATH' in os.environ:
-    os.environ['LD_LIBRARY_PATH'] += ':/usr/local/cuda/lib64:/usr/local/nvidia/lib64:/opt/conda/lib:/usr/lib/x86_64-linux-gnu'
-
-# Create necessary symlinks - run this in a separate cell first
-!ln -sf /usr/local/cuda/lib64/libcudart.so.11.0 /usr/local/cuda/lib64/libcudart.so 2>/dev/null || true
-!ln -sf /usr/local/cuda/lib64/libcudart.so /opt/conda/lib/libcudart.so.11.0 2>/dev/null || true
-
-print("Environment setup completed")
 import torch
 import argparse
 import numpy as np
